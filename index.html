@@ -1,99 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrustKart - Electronics Store</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TrustKart - Electronics Store</title>
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial, sans-serif;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
 
-        body{
-            background:#f5f7fa;
-        }
+body{
+    background:#f5f7fa;
+    color:#333;
+}
 
-        /* Navbar */
-        nav{
-            background:#0a3d91;
-            color:white;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            padding:15px 30px;
-            position:sticky;
-            top:0;
-        }
+/* Navbar */
 
-        .logo{
-            font-size:28px;
-            font-weight:bold;
-        }
+nav{
+    background:#0a3d91;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
 
-        .menu a{
-            color:white;
-            text-decoration:none;
-            margin-left:20px;
-            font-weight:bold;
-        }
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
 
-        /* Hero Section */
+.menu a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+}
 
-        .hero{
-            text-align:center;
-            padding:80px 20px;
-            background:linear-gradient(135deg,#0a3d91,#00b894);
-            color:white;
-        }
+.menu a:hover{
+    color:#ffd54f;
+}
 
-        .hero h1{
-            font-size:45px;
-        }
+/* Hero */
 
-        .hero p{
-            margin-top:15px;
-            font-size:20px;
-        }
+.hero{
+    text-align:center;
+    padding:80px 20px;
+    background:linear-gradient(135deg,#0a3d91,#00b894);
+    color:white;
+}
 
-        .btn{
-            margin-top:25px;
-            padding:15px 35px;
-            background:white;
-            color:#0a3d91;
-            border:none;
-            border-radius:50px;
-            font-size:18px;
-            cursor:pointer;
-            font-weight:bold;
-        }
+.hero h1{
+    font-size:45px;
+    margin-bottom:15px;
+}
 
-        /* Categories */
+.hero p{
+    font-size:20px;
+}
 
-        .categories{
-            padding:50px 20px;
-            text-align:center;
-        }
+.btn{
+    margin-top:25px;
+    padding:14px 35px;
+    border:none;
+    border-radius:50px;
+    background:white;
+    color:#0a3d91;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
 
-        .cat-box{
-            display:inline-block;
-            width:180px;
-            background:white;
-            margin:15px;
-            padding:30px;
-            border-radius:15px;
-            box-shadow:0 5px 15px rgba(0,0,0,.1);
-            font-size:22px;
-            transition:.3s;
-        }
+.btn:hover{
+    background:#ffd54f;
+}
 
-        .cat-box:hover{
-            transform:translateY(-8px);
-        }
-/* Featured Products */
+/* Categories */
+
+.categories{
+    padding:50px 20px;
+    text-align:center;
+}
+
+.cat-box{
+    display:inline-block;
+    width:180px;
+    background:white;
+    margin:15px;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    font-size:22px;
+    transition:.3s;
+}
+
+.cat-box:hover{
+    transform:translateY(-8px);
+}
+    /* Featured Products */
 
 .products{
     padding:50px 20px;
@@ -108,8 +119,8 @@
     margin:15px;
     padding:20px;
     border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    transition:0.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
 }
 
 .product-box:hover{
@@ -123,7 +134,6 @@
 
 .product-box h3{
     margin:15px 0;
-    font-size:22px;
 }
 
 .product-box p{
@@ -134,28 +144,24 @@
 
 .product-box button{
     background:#0a3d91;
-    color:#fff;
+    color:white;
     border:none;
     padding:10px 20px;
     border-radius:30px;
     cursor:pointer;
-    font-size:16px;
 }
 
 .product-box button:hover{
     background:#062b66;
 }
-    </style>
 
+</style>
 </head>
 
 <body>
 
 <nav>
-
-<div class="logo">
-🛒 TrustKart
-</div>
+<div class="logo">🛒 TrustKart</div>
 
 <div class="menu">
 <a href="#">Home</a>
@@ -163,34 +169,56 @@
 <a href="#">Deals</a>
 <a href="#">Contact</a>
 </div>
-
 </nav>
 
 <section class="hero">
-
 <h1>India's Trusted Electronics Store</h1>
-
 <p>Smart Shopping • Best Price • Fast Delivery</p>
-
 <button class="btn">Shop Now</button>
-
 </section>
 
 <section class="categories">
-
 <h2>Shop By Category</h2>
-
 <br><br>
 
 <div class="cat-box">📱<br>Mobiles</div>
-
 <div class="cat-box">💻<br>Laptops</div>
-
 <div class="cat-box">⌚<br>Smart Watch</div>
-
 <div class="cat-box">🎧<br>Earbuds</div>
 
 </section>
+<section class="products">
+
+<h2>🔥 Featured Products</h2>
+<br>
+
+<div class="product-box">
+    <img src="https://via.placeholder.com/220x180?text=Earbuds" alt="Earbuds">
+    <h3>Wireless Earbuds</h3>
+    <p>₹999 <del>₹1999</del></p>
+    <button>🛒 Add to Cart</button>
+</div>
+
+<div class="product-box">
+    <img src="https://via.placeholder.com/220x180?text=Watch" alt="Watch">
+    <h3>Smart Watch</h3>
+    <p>₹1499 <del>₹2999</del></p>
+    <button>🛒 Add to Cart</button>
+</div>
+
+<div class="product-box">
+    <img src="https://via.placeholder.com/220x180?text=Speaker" alt="Speaker">
+    <h3>Bluetooth Speaker</h3>
+    <p>₹799 <del>₹1599</del></p>
+    <button>🛒 Add to Cart</button>
+</div>
+
+</section>
+
+<footer style="background:#0a3d91;color:white;text-align:center;padding:20px;margin-top:40px;">
+    <h3>🛒 TrustKart Store</h3>
+    <p>© 2026 TrustKart. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
