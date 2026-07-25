@@ -3,27 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrustKart</title>
+    <title>TrustKart - Electronics Store</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f5f7fa;
+        }
+
+        /* Navbar */
+        nav{
+            background:#0a3d91;
+            color:white;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:15px 30px;
+            position:sticky;
+            top:0;
+        }
+
+        .logo{
+            font-size:28px;
+            font-weight:bold;
+        }
+
+        .menu a{
+            color:white;
+            text-decoration:none;
+            margin-left:20px;
+            font-weight:bold;
+        }
+
+        /* Hero Section */
+
+        .hero{
+            text-align:center;
+            padding:80px 20px;
+            background:linear-gradient(135deg,#0a3d91,#00b894);
+            color:white;
+        }
+
+        .hero h1{
+            font-size:45px;
+        }
+
+        .hero p{
+            margin-top:15px;
+            font-size:20px;
+        }
+
+        .btn{
+            margin-top:25px;
+            padding:15px 35px;
+            background:white;
+            color:#0a3d91;
+            border:none;
+            border-radius:50px;
+            font-size:18px;
+            cursor:pointer;
+            font-weight:bold;
+        }
+
+        /* Categories */
+
+        .categories{
+            padding:50px 20px;
+            text-align:center;
+        }
+
+        .cat-box{
+            display:inline-block;
+            width:180px;
+            background:white;
+            margin:15px;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 5px 15px rgba(0,0,0,.1);
+            font-size:22px;
+            transition:.3s;
+        }
+
+        .cat-box:hover{
+            transform:translateY(-8px);
+        }
+
+    </style>
+
 </head>
+
 <body>
 
-    <h1>🛒 TrustKart</h1>
-    <h2>Har Shopping Mein Bharosa</h2>
+<nav>
 
-    <hr>
+<div class="logo">
+🛒 TrustKart
+</div>
 
-    <h3>Categories</h3>
-    <ul>
-        <li>📱 Electronics</li>
-        <li>👕 Fashion</li>
-        <li>👟 Shoes</li>
-        <li>🏠 Home & Kitchen</li>
-    </ul>
+<div class="menu">
+<a href="#">Home</a>
+<a href="#">Products</a>
+<a href="#">Deals</a>
+<a href="#">Contact</a>
+</div>
 
-    <h3>Today's Deals</h3>
-    <p>🔥 Up to 50% OFF</p>
+</nav>
 
-    <button>Shop Now</button>
+<section class="hero">
+
+<h1>India's Trusted Electronics Store</h1>
+
+<p>Smart Shopping • Best Price • Fast Delivery</p>
+
+<button class="btn">Shop Now</button>
+
+</section>
+
+<section class="categories">
+
+<h2>Shop By Category</h2>
+
+<br><br>
+
+<div class="cat-box">📱<br>Mobiles</div>
+
+<div class="cat-box">💻<br>Laptops</div>
+
+<div class="cat-box">⌚<br>Smart Watch</div>
+
+<div class="cat-box">🎧<br>Earbuds</div>
+
+</section>
 
 </body>
 </html>
