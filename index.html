@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>TrustKart Store | India's Trusted Electronics Store</title>
+<title>TrustKart Store</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -19,223 +15,96 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-html{
-scroll-behavior:smooth;
+font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-background:#f5f7fb;
-color:#333;
+background:#f5f5f5;
 }
 
-a{
-text-decoration:none;
-}
+/* HEADER */
 
-img{
-max-width:100%;
-display:block;
-}
-
-/* =========================
-   NAVBAR
-========================= */
-
-nav{
-
-position:sticky;
-top:0;
-z-index:1000;
-
+header{
+width:100%;
+background:#131921;
+padding:12px 5%;
 display:flex;
-justify-content:space-between;
 align-items:center;
-
-padding:16px 8%;
-
-background:#0a3d91;
-
-box-shadow:0 4px 12px rgba(0,0,0,.15);
-
+justify-content:space-between;
+flex-wrap:wrap;
 }
 
 .logo{
-
 font-size:30px;
-font-weight:700;
-color:#fff;
-
+font-weight:bold;
+color:#ff9900;
 }
 
 .logo span{
-
-color:#ffd54f;
-
-}
-
-.menu{
-
-display:flex;
-gap:28px;
-
-}
-
-.menu a{
-
-color:white;
-font-weight:500;
-transition:.3s;
-
-}
-
-.menu a:hover{
-
-color:#ffd54f;
-
+color:#fff;
 }
 
 .search-box{
-
+flex:1;
 display:flex;
-align-items:center;
-background:white;
-border-radius:30px;
-overflow:hidden;
-
+margin:10px 25px;
+max-width:700px;
 }
 
 .search-box input{
-
+width:100%;
+padding:12px;
 border:none;
 outline:none;
-padding:10px 15px;
-width:180px;
-
+font-size:16px;
+border-radius:6px 0 0 6px;
 }
 
 .search-box button{
-
+padding:12px 18px;
+background:#ff9900;
 border:none;
-background:#ffd54f;
-padding:10px 15px;
 cursor:pointer;
-
+font-size:18px;
+border-radius:0 6px 6px 0;
 }
 
-/* =========================
-   HERO
-========================= */
-
-.hero{
-
-min-height:90vh;
-
+.nav-buttons{
 display:flex;
-justify-content:center;
-align-items:center;
-
-text-align:center;
-
-padding:60px 8%;
-
-background:
-linear-gradient(rgba(10,61,145,.82),rgba(0,184,148,.82)),
-url("https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1600&q=80");
-
-background-size:cover;
-background-position:center;
-
-color:white;
-
-}
-
-.hero-content{
-
-max-width:760px;
-
-}
-
-.hero h1{
-
-font-size:52px;
-margin-bottom:20px;
-
-}
-
-.hero h1 span{
-
-color:#ffd54f;
-
-}
-
-.hero p{
-
-font-size:20px;
-line-height:1.8;
-margin-bottom:35px;
-
-}
-
-.hero-buttons{
-
-display:flex;
-justify-content:center;
-gap:18px;
-flex-wrap:wrap;
-
+gap:15px;
 }
 
 .btn{
-
-padding:15px 35px;
-
-border:none;
-
-border-radius:50px;
-
-cursor:pointer;
-
-font-size:17px;
-
-font-weight:600;
-
+background:#ff9900;
+color:#000;
+padding:10px 18px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
 transition:.3s;
-
 }
 
-.btn-primary{
-
-background:#ffd54f;
-color:#111;
-
+.btn:hover{
+background:#ffc107;
 }
 
-.btn-primary:hover{
+@media(max-width:768px){
 
-background:#ffca28;
-transform:translateY(-4px);
-
+header{
+flex-direction:column;
 }
 
-.btn-outline{
-
-background:transparent;
-border:2px solid white;
-color:white;
-
+.search-box{
+width:100%;
+margin:15px 0;
 }
 
-.btn-outline:hover{
-
-background:white;
-color:#0a3d91;
-
+.nav-buttons{
+width:100%;
+justify-content:center;
 }
 
-/* ===== PART 2 CSS YAHAN SE SHURU HOGI ===== */
+}
 
 </style>
 
@@ -243,76 +112,1349 @@ color:#0a3d91;
 
 <body>
 
-<nav>
+<header>
 
 <div class="logo">
-
-🛒 Trust<span>Kart</span>
-
-</div>
-
-<div class="menu">
-
-<a href="#">Home</a>
-
-<a href="#">Categories</a>
-
-<a href="#">Products</a>
-
-<a href="#">Deals</a>
-
-<a href="#">Contact</a>
-
+Trust<span>Kart</span>
 </div>
 
 <div class="search-box">
-
-<input type="text" placeholder="Search Products">
-
+<input type="text" placeholder="Search Products...">
 <button>🔍</button>
+</div>
+
+<div class="nav-buttons">
+
+<a href="#" class="btn">Login</a>
+
+<a href="#" class="btn">🛒 Cart</a>
 
 </div>
 
-</nav>
+</header>
+<!-- SHOP BY CATEGORY -->
 
-<section class="hero">
+<section class="categories">
 
-<div class="hero-content">
+    <h2>Shop by Category</h2>
 
-<h1>
+    <div class="category-grid">
 
-India's Trusted
-<span>Electronics Store</span>
+        <div class="cat-box">👔<br>Men's Fashion</div>
 
-</h1>
+        <div class="cat-box">👗<br>Women's Fashion</div>
+
+        <div class="cat-box">👟<br>Footwear</div>
+
+        <div class="cat-box">👜<br>Bags</div>
+
+        <div class="cat-box">⌚<br>Watches</div>
+
+        <div class="cat-box">💍<br>Jewellery</div>
+
+        <div class="cat-box">📱<br>Mobiles</div>
+
+        <div class="cat-box">💻<br>Laptops</div>
+
+        <div class="cat-box">🎧<br>Earbuds</div>
+
+        <div class="cat-box">🏠<br>Home Essentials</div>
+
+    </div>
+
+</section>
+
+<style>
+
+.categories{
+    padding:60px 5%;
+    background:#fff;
+}
+
+.categories h2{
+    text-align:center;
+    font-size:34px;
+    margin-bottom:35px;
+}
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+    gap:20px;
+}
+
+.cat-box{
+    background:#f8f8f8;
+    border-radius:12px;
+    padding:30px 15px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    transition:.3s;
+    cursor:pointer;
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+
+.cat-box:hover{
+    background:#ff9900;
+    color:#fff;
+    transform:translateY(-8px);
+}
+
+   </style>
+   <!-- TRENDING PRODUCTS SECTION -->
+
+<section class="products">
+
+<h2>🔥 Trending Offers</h2>
+
+<div class="product-grid">
+
+
+<!-- Product 1 -->
+
+<div class="product-card">
+
+<div class="offer-tag">40% OFF</div>
+
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" 
+alt="Men T Shirt">
+
+<h3>Men Premium T-Shirt</h3>
+
+<p class="rating">⭐⭐⭐⭐⭐</p>
+
+<p class="old-price">₹1999</p>
+
+<p class="new-price">₹1199</p>
+
+<button>Add to Cart 🛒</button>
+
+</div>
+
+
+
+<!-- Product 2 -->
+
+<div class="product-card">
+
+<div class="offer-tag">35% OFF</div>
+
+<img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8" 
+alt="Women Dress">
+
+<h3>Women's Stylish Dress</h3>
+
+<p class="rating">⭐⭐⭐⭐⭐</p>
+
+<p class="old-price">₹2499</p>
+
+<p class="new-price">₹1599</p>
+
+<button>Add to Cart 🛒</button>
+
+</div>
+
+
+
+<!-- Product 3 -->
+
+<div class="product-card">
+
+<div class="offer-tag">30% OFF</div>
+
+<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" 
+alt="Earbuds">
+
+<h3>Wireless Earbuds</h3>
+
+<p class="rating">⭐⭐⭐⭐</p>
+
+<p class="old-price">₹1499</p>
+
+<p class="new-price">₹999</p>
+
+<button>Add to Cart 🛒</button>
+
+</div>
+
+
+
+<!-- Product 4 -->
+
+<div class="product-card">
+
+<div class="offer-tag">25% OFF</div>
+
+<img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" 
+alt="Smart Watch">
+
+<h3>Smart Watch</h3>
+
+<p class="rating">⭐⭐⭐⭐⭐</p>
+
+<p class="old-price">₹2999</p>
+
+<p class="new-price">₹2199</p>
+
+<button>Add to Cart 🛒</button>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<style>
+
+.products{
+padding:60px 5%;
+background:#f5f5f5;
+}
+
+
+.products h2{
+text-align:center;
+font-size:35px;
+margin-bottom:40px;
+}
+
+
+.product-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:25px;
+
+}
+
+
+.product-card{
+
+background:white;
+padding:20px;
+border-radius:15px;
+text-align:center;
+position:relative;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:.3s;
+
+}
+
+
+.product-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+
+.product-card img{
+
+width:100%;
+height:230px;
+object-fit:cover;
+border-radius:12px;
+
+}
+
+
+.offer-tag{
+
+position:absolute;
+top:15px;
+left:15px;
+background:red;
+color:white;
+padding:7px 12px;
+border-radius:5px;
+font-weight:bold;
+
+}
+
+
+.product-card h3{
+
+margin:15px 0;
+
+}
+
+
+.rating{
+
+font-size:18px;
+
+}
+
+
+.old-price{
+
+text-decoration:line-through;
+color:gray;
+
+}
+
+
+.new-price{
+
+color:#e65100;
+font-size:24px;
+font-weight:bold;
+
+}
+
+
+.product-card button{
+
+background:#ff9900;
+border:none;
+padding:12px 25px;
+border-radius:7px;
+font-weight:bold;
+cursor:pointer;
+margin-top:15px;
+
+}
+
+
+.product-card button:hover{
+
+background:#ffc107;
+
+}
+
+</style>
+<!-- TODAY'S DEALS SECTION -->
+
+<section class="deals">
+
+<h2>🔥 Today's Deals</h2>
+
+<div class="deal-banner">
+
+<h1>Big Sale is Live!</h1>
+
+<p>Grab amazing discounts up to 60% OFF</p>
+
+<a href="#" class="deal-btn">Shop Deals</a>
+
+</div>
+
+
+<div class="deal-products">
+
+
+<div class="deal-card">
+
+<img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30">
+
+<h3>Premium Watch</h3>
+
+<p>60% OFF</p>
+
+<button>Buy Now</button>
+
+</div>
+
+
+
+<div class="deal-card">
+
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff">
+
+<h3>Sports Shoes</h3>
+
+<p>50% OFF</p>
+
+<button>Buy Now</button>
+
+</div>
+
+
+
+<div class="deal-card">
+
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
+
+<h3>Smart Phone</h3>
+
+<p>35% OFF</p>
+
+<button>Buy Now</button>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- DELIVERY FEATURES -->
+
+<section class="features">
+
+
+<div class="feature-box">
+
+<h2>🚚</h2>
+
+<h3>Free Delivery</h3>
+
+<p>Fast and Safe Delivery</p>
+
+</div>
+
+
+
+<div class="feature-box">
+
+<h2>💳</h2>
+
+<h3>Secure Payment</h3>
+
+<p>100% Safe Checkout</p>
+
+</div>
+
+
+
+<div class="feature-box">
+
+<h2>🔄</h2>
+
+<h3>Easy Return</h3>
+
+<p>Easy Product Return</p>
+
+</div>
+
+
+
+<div class="feature-box">
+
+<h2>⭐</h2>
+
+<h3>Trusted Store</h3>
+
+<p>Quality Products</p>
+
+</div>
+
+
+</section>
+
+
+
+<style>
+
+/* DEAL SECTION */
+
+.deals{
+
+padding:60px 5%;
+background:white;
+
+}
+
+
+.deals h2{
+
+text-align:center;
+font-size:35px;
+margin-bottom:30px;
+
+}
+
+
+.deal-banner{
+
+background:linear-gradient(135deg,#ff9900,#ffcc33);
+padding:40px;
+border-radius:15px;
+text-align:center;
+
+}
+
+
+.deal-banner h1{
+
+font-size:40px;
+
+}
+
+
+.deal-banner p{
+
+font-size:20px;
+margin:15px;
+
+}
+
+
+.deal-btn{
+
+display:inline-block;
+background:#131921;
+color:white;
+padding:12px 30px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+
+}
+
+
+
+.deal-products{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:40px;
+
+}
+
+
+.deal-card{
+
+background:#f5f5f5;
+padding:20px;
+border-radius:12px;
+text-align:center;
+
+}
+
+
+.deal-card img{
+
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:10px;
+
+}
+
+
+.deal-card p{
+
+color:red;
+font-size:22px;
+font-weight:bold;
+
+}
+
+
+.deal-card button{
+
+background:#ff9900;
+border:none;
+padding:10px 25px;
+border-radius:6px;
+font-weight:bold;
+
+}
+
+
+/* FEATURES */
+
+.features{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+padding:50px 5%;
+background:#131921;
+
+}
+
+
+.feature-box{
+
+background:white;
+padding:25px;
+text-align:center;
+border-radius:12px;
+
+}
+
+
+.feature-box h2{
+
+font-size:35px;
+
+}
+
+
+</style>
+<!-- ABOUT SECTION -->
+
+<section class="about">
+
+<h2>About TrustKart</h2>
 
 <p>
-
-Shop Mobiles, Laptops,
-Smart Watches,
-Earbuds and Accessories
-at Best Prices.
-
+TrustKart is a premium online shopping store where you can
+find Fashion, Electronics, Home Products and Daily Essentials
+at the best prices with secure shopping experience.
 </p>
 
-<div class="hero-buttons">
+</section>
 
-<button class="btn btn-primary">
 
-🛍 Shop Now
 
-</button>
+<!-- CONTACT SECTION -->
 
-<button class="btn btn-outline">
+<section class="contact">
 
-🔥 Explore Deals
+<h2>Contact Us</h2>
 
-</button>
+<div class="contact-box">
 
+<p>📧 Email: support@trustkart.com</p>
+
+<p>📞 Phone: +91 9876543210</p>
+
+<p>📍 Address: India</p>
+
+</div>
+
+</section>
+
+
+
+<!-- NEWSLETTER -->
+
+<section class="newsletter">
+
+<h2>Subscribe For Latest Offers</h2>
+
+<p>Get updates about new products and discounts.</p>
+
+<div class="subscribe">
+
+<input type="email" placeholder="Enter Your Email">
+
+<button>Subscribe</button>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-content">
+
+
+<div>
+
+<h3>TrustKart</h3>
+
+<p>
+Your trusted online shopping partner.
+</p>
+
+</div>
+
+
+
+<div>
+
+<h3>Quick Links</h3>
+
+<p>Home</p>
+
+<p>Products</p>
+
+<p>Offers</p>
+
+<p>Contact</p>
+
+</div>
+
+
+
+<div>
+
+<h3>Customer Service</h3>
+
+<p>Help Center</p>
+
+<p>Order Tracking</p>
+
+<p>Returns</p>
+
+<p>Privacy Policy</p>
+
+</div>
+
+
+
+<div>
+
+<h3>Follow Us</h3>
+
+<p>Facebook</p>
+
+<p>Instagram</p>
+
+<p>YouTube</p>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 TrustKart Store. All Rights Reserved.
+
+</div>
+
+
+</footer>
+
+
+
+<style>
+
+/* ABOUT */
+
+.about{
+
+padding:50px 5%;
+text-align:center;
+background:white;
+
+}
+
+
+.about h2,
+.contact h2,
+.newsletter h2{
+
+font-size:32px;
+margin-bottom:20px;
+
+}
+
+
+.about p{
+
+max-width:800px;
+margin:auto;
+font-size:18px;
+line-height:30px;
+
+}
+
+
+
+/* CONTACT */
+
+.contact{
+
+padding:50px 5%;
+text-align:center;
+background:#f5f5f5;
+
+}
+
+
+.contact-box{
+
+font-size:18px;
+line-height:35px;
+
+}
+
+
+
+/* NEWSLETTER */
+
+.newsletter{
+
+padding:50px 5%;
+text-align:center;
+background:#fff;
+
+}
+
+
+.subscribe{
+
+display:flex;
+justify-content:center;
+gap:10px;
+margin-top:20px;
+
+}
+
+
+.subscribe input{
+
+padding:14px;
+width:300px;
+border:1px solid #ccc;
+border-radius:6px;
+
+}
+
+
+.subscribe button{
+
+background:#ff9900;
+border:none;
+padding:14px 25px;
+border-radius:6px;
+font-weight:bold;
+
+}
+
+
+
+/* FOOTER */
+
+footer{
+
+background:#131921;
+color:white;
+padding:40px 5%;
+
+}
+
+
+.footer-content{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+
+}
+
+
+.footer-content h3{
+
+color:#ff9900;
+margin-bottom:15px;
+
+}
+
+
+.footer-content p{
+
+line-height:28px;
+
+}
+
+
+.copyright{
+
+text-align:center;
+margin-top:30px;
+border-top:1px solid #555;
+padding-top:20px;
+
+}
+
+
+
+@media(max-width:600px){
+
+.subscribe{
+
+flex-direction:column;
+
+}
+
+.subscribe input{
+
+width:100%;
+
+}
+
+}
+
+</style>
+<!-- PART 5 START -->
+
+<!-- ABOUT SECTION -->
+
+<section class="about-section">
+
+<h2>About TrustKart</h2>
+
+<p>
+TrustKart is a trusted online shopping platform where you can
+buy fashion, electronics, accessories and daily use products
+with great offers and secure shopping.
+</p>
+
+</section>
+
+
+<!-- WHY CHOOSE US -->
+
+<section class="choose-section">
+
+<h2>Why Choose TrustKart?</h2>
+
+<div class="choose-grid">
+
+<div class="choose-card">
+<h3>🚚 Fast Delivery</h3>
+<p>Quick and safe delivery service.</p>
+</div>
+
+<div class="choose-card">
+<h3>🔒 Secure Payment</h3>
+<p>Safe and trusted payment system.</p>
+</div>
+
+<div class="choose-card">
+<h3>↩️ Easy Return</h3>
+<p>Simple return and refund process.</p>
+</div>
+
+<div class="choose-card">
+<h3>⭐ Quality Products</h3>
+<p>Premium quality products at best price.</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- PART 2 YAHAN SE START HOGA -->
+
+<!-- CUSTOMER SUPPORT -->
+
+<section class="support-section">
+
+<h2>Customer Support</h2>
+
+<p>📞 Call: 63927 57667</p>
+
+<p>📧 Email: SonuKumar8466022@gmail.com</p>
+
+<p>🕒 Support Time: 9 AM - 9 PM</p>
+
+</section>
+
+
+<!-- NEWSLETTER -->
+
+<section class="newsletter-section">
+
+<h2>Get Latest Offers</h2>
+
+<p>Subscribe and receive new deals first.</p>
+
+<div class="email-box">
+
+<input type="email" placeholder="Enter your email">
+
+<button>Subscribe</button>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="main-footer">
+
+<div class="footer-grid">
+
+<div>
+<h3>TrustKart</h3>
+<p>Your online shopping partner.</p>
+</div>
+
+
+<div>
+<h3>Shopping</h3>
+<p>Men Fashion</p>
+<p>Women Fashion</p>
+<p>Electronics</p>
+<p>Offers</p>
+</div>
+
+
+<div>
+<h3>Help</h3>
+<p>Contact Us</p>
+<p>Order Tracking</p>
+<p>Privacy Policy</p>
+<p>Terms & Conditions</p>
+</div>
+
+
+<div>
+<h3>Follow Us</h3>
+<p>Facebook</p>
+<p>Instagram</p>
+<p>YouTube</p>
+</div>
+
+</div>
+
+
+<p class="copyright">
+© 2026 TrustKart Store | All Rights Reserved
+</p>
+
+
+</footer>
+
+
+
+<style>
+
+.about-section{
+padding:50px 5%;
+text-align:center;
+background:white;
+}
+
+.about-section h2,
+.choose-section h2,
+.support-section h2,
+.newsletter-section h2{
+font-size:32px;
+margin-bottom:20px;
+}
+
+
+.choose-section{
+padding:50px 5%;
+background:#f5f5f5;
+}
+
+
+.choose-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+
+.choose-card{
+background:white;
+padding:25px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+
+
+.support-section{
+padding:50px 5%;
+text-align:center;
+}
+
+
+.newsletter-section{
+padding:50px 5%;
+text-align:center;
+background:#fff;
+}
+
+
+.email-box{
+margin-top:20px;
+}
+
+
+.email-box input{
+padding:12px;
+width:300px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+
+.email-box button{
+padding:12px 25px;
+background:#ff9900;
+border:none;
+border-radius:6px;
+font-weight:bold;
+}
+
+
+.main-footer{
+background:#131921;
+color:white;
+padding:40px 5%;
+}
+
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+}
+
+
+.footer-grid h3{
+color:#ff9900;
+margin-bottom:15px;
+}
+
+
+.footer-grid p{
+line-height:28px;
+}
+
+
+.copyright{
+text-align:center;
+margin-top:30px;
+border-top:1px solid #555;
+padding-top:20px;
+}
+
+
+@media(max-width:600px){
+
+.email-box input{
+width:100%;
+}
+
+}
+
+</style>
+<!-- PART 6 START -->
+
+<!-- FLOATING CART -->
+
+<div class="floating-cart">
+🛒 <span>0</span>
+</div>
+
+
+<!-- LOGIN BOX -->
+
+<div class="login-box">
+
+<h2>Welcome Back</h2>
+
+<input type="text" placeholder="Enter Email">
+
+<input type="password" placeholder="Password">
+
+<button>Login</button>
+
+</div>
+
+
+
+<!-- FINAL FEATURES -->
+
+<section class="final-features">
+
+<div>
+<h3>🛒 Easy Shopping</h3>
+<p>Simple and fast buying experience.</p>
+</div>
+
+
+<div>
+<h3>❤️ Wishlist</h3>
+<p>Save your favourite products.</p>
+</div>
+
+
+<div>
+<h3>🔍 Smart Search</h3>
+<p>Find products quickly.</p>
+</div>
+
+
+</section>
+
+
+
+<style>
+
+/* FLOATING CART */
+
+.floating-cart{
+
+position:fixed;
+right:25px;
+bottom:25px;
+background:#ff9900;
+padding:15px;
+border-radius:50%;
+font-size:25px;
+cursor:pointer;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+z-index:99;
+
+}
+
+
+.floating-cart span{
+
+background:red;
+color:white;
+border-radius:50%;
+padding:3px 8px;
+font-size:14px;
+
+}
+
+
+
+/* LOGIN */
+
+.login-box{
+
+max-width:350px;
+margin:50px auto;
+padding:30px;
+background:white;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.15);
+text-align:center;
+
+}
+
+
+.login-box input{
+
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:6px;
+
+}
+
+
+.login-box button{
+
+background:#ff9900;
+border:none;
+padding:12px 30px;
+border-radius:6px;
+font-weight:bold;
+
+}
+
+
+
+/* FINAL FEATURES */
+
+.final-features{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+padding:50px 5%;
+background:#f5f5f5;
+text-align:center;
+
+}
+
+
+.final-features div{
+
+background:white;
+padding:25px;
+border-radius:12px;
+transition:.3s;
+
+}
+
+
+.final-features div:hover{
+
+transform:translateY(-8px);
+
+}
+
+
+
+/* ANIMATION */
+
+.product-card,
+.deal-card,
+.cat-box{
+
+animation:up 0.6s ease;
+
+}
+
+
+@keyframes up{
+
+from{
+
+opacity:0;
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+
+
+@media(max-width:600px){
+
+.login-box{
+
+margin:30px 15px;
+
+}
+
+}
+
+</style>
+
+
+<script>
+
+// CART COUNTER
+
+let cartCount = 0;
+
+let cartButton = document.querySelector(".floating-cart span");
+
+let addButtons = document.querySelectorAll("button");
+
+
+addButtons.forEach(function(btn){
+
+btn.addEventListener("click",function(){
+
+cartCount++;
+
+cartButton.innerHTML = cartCount;
+
+});
+
+});
+
+
+</script>
+
+
+
