@@ -7369,7 +7369,15 @@ LOADING SCREEN
 =========================== -->
 
 
-<div class="loading-screen" id="loadingScreen">
+
+
+
+<!-- ===========================
+TRUSTKART V3 - PART 40 END
+=========================== -->
+
+
+<div id="loadingScreen">
 
 <div class="loader"></div>
 
@@ -7381,15 +7389,14 @@ LOADING SCREEN
 
 <style>
 
-
-.loading-screen{
+#loadingScreen{
 
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100%;
-background:#ffffff;
+background:white;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -7399,12 +7406,11 @@ z-index:99999;
 }
 
 
-
 .loader{
 
-width:60px;
-height:60px;
-border:6px solid #eeeeee;
+width:55px;
+height:55px;
+border:6px solid #ddd;
 border-top:6px solid #ff9800;
 border-radius:50%;
 animation:spin 1s linear infinite;
@@ -7412,27 +7418,18 @@ animation:spin 1s linear infinite;
 }
 
 
+#loadingScreen p{
 
-.loading-screen p{
-
-margin-top:20px;
+margin-top:15px;
 font-size:20px;
 font-weight:bold;
-color:#131921;
 
 }
-
 
 
 @keyframes spin{
 
-from{
-
-transform:rotate(0deg);
-
-}
-
-to{
+100%{
 
 transform:rotate(360deg);
 
@@ -7441,35 +7438,17 @@ transform:rotate(360deg);
 }
 
 
-
 </style>
 
 
 
 <script>
 
-
-window.addEventListener("load",function(){
-
-
 setTimeout(function(){
 
+document.getElementById("loadingScreen").style.display="none";
 
-let loader=document.getElementById("loadingScreen");
-
-
-if(loader){
-
-loader.style.display="none";
-
-}
-
-
-},1000);
-
-
-
-});
+},2000);
 
 
 </script>
@@ -7478,7 +7457,6 @@ loader.style.display="none";
 <!-- ===========================
 TRUSTKART V3 - PART 40 END
 =========================== -->
-
 
 
 <!-- ===========================
