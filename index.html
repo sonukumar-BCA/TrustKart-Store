@@ -7363,11 +7363,19 @@ filterProducts
 
 </script>
 
-<!-- ===========================
+
 TRUSTKART V3 - PART 40
-PRODUCT LOADING SKELETON
+LOADING SCREEN
 =========================== -->
 
+
+<div class="loading-screen" id="loadingScreen">
+
+<div class="loader"></div>
+
+<p>Loading TrustKart...</p>
+
+</div>
 
 
 
@@ -7381,7 +7389,7 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:white;
+background:#ffffff;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -7396,7 +7404,7 @@ z-index:99999;
 
 width:60px;
 height:60px;
-border:6px solid #eee;
+border:6px solid #eeeeee;
 border-top:6px solid #ff9800;
 border-radius:50%;
 animation:spin 1s linear infinite;
@@ -7410,6 +7418,7 @@ animation:spin 1s linear infinite;
 margin-top:20px;
 font-size:20px;
 font-weight:bold;
+color:#131921;
 
 }
 
@@ -7417,12 +7426,16 @@ font-weight:bold;
 
 @keyframes spin{
 
-0%{
+from{
+
 transform:rotate(0deg);
+
 }
 
-100%{
+to{
+
 transform:rotate(360deg);
+
 }
 
 }
@@ -7441,8 +7454,15 @@ window.addEventListener("load",function(){
 
 setTimeout(function(){
 
-document.getElementById("loadingScreen")
-.style.display="none";
+
+let loader=document.getElementById("loadingScreen");
+
+
+if(loader){
+
+loader.style.display="none";
+
+}
 
 
 },1000);
@@ -7452,8 +7472,15 @@ document.getElementById("loadingScreen")
 });
 
 
-
 </script>
+
+
+<!-- ===========================
+TRUSTKART V3 - PART 40 END
+=========================== -->
+
+
+
 <!-- ===========================
 TRUSTKART V3 - PART 41
 SELLER PANEL UI
