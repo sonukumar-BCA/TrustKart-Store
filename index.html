@@ -3,223 +3,577 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TrustKart - Electronics Store</title>
+
+<title>TrustKart Store | India's Trusted Electronics Store</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,sans-serif;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-    background:#f5f7fa;
+    background:#f5f7fb;
     color:#333;
 }
 
-/* Navbar */
+/* =========================
+   PREMIUM NAVBAR
+========================= */
 
 nav{
-    background:#0a3d91;
-    color:#fff;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 30px;
     position:sticky;
     top:0;
     z-index:1000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px 8%;
+    background:#0a3d91;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
 }
 
 .logo{
-    font-size:28px;
-    font-weight:bold;
+    font-size:30px;
+    font-weight:700;
+    color:#fff;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:#ffd54f;
+}
+
+.menu{
+    display:flex;
+    gap:25px;
 }
 
 .menu a{
-    color:white;
+    color:#fff;
     text-decoration:none;
-    margin-left:20px;
-    font-weight:bold;
+    font-weight:500;
+    transition:.3s;
 }
 
 .menu a:hover{
     color:#ffd54f;
 }
 
-/* Hero */
+/* =========================
+   HERO SECTION
+========================= */
 
 .hero{
+
+    min-height:90vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    padding:80px 20px;
-    background:linear-gradient(135deg,#0a3d91,#00b894);
-    color:white;
+
+    padding:60px 8%;
+
+    background:
+    linear-gradient(rgba(10,61,145,.82),rgba(0,184,148,.82)),
+    url("https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1400&q=80");
+
+    background-size:cover;
+    background-position:center;
+
+    color:#fff;
+}
+
+.hero-content{
+    max-width:750px;
 }
 
 .hero h1{
-    font-size:45px;
-    margin-bottom:15px;
+
+    font-size:52px;
+    line-height:1.3;
+    margin-bottom:18px;
+
+}
+
+.hero h1 span{
+    color:#ffd54f;
 }
 
 .hero p{
+
     font-size:20px;
+    line-height:1.8;
+    margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+
 }
 
 .btn{
-    margin-top:25px;
-    padding:14px 35px;
+
+    padding:15px 34px;
     border:none;
     border-radius:50px;
-    background:white;
-    color:#0a3d91;
-    font-size:18px;
-    font-weight:bold;
+
+    font-size:17px;
+    font-weight:600;
+
     cursor:pointer;
-}
 
-.btn:hover{
-    background:#08306b;
-    color:#ffffff;
-}
-}
-
-/* Categories */
-
-.categories{
-    padding:50px 20px;
-    text-align:center;
-}
-
-.cat-box{
-    display:inline-block;
-    width:180px;
-    background:white;
-    margin:15px;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-    font-size:22px;
     transition:.3s;
+
 }
 
-.cat-box:hover{
-    transform:translateY(-8px);
-}
-    /* Featured Products */
+.btn-primary{
 
-.products{
-    padding:50px 20px;
-    text-align:center;
-    background:#f8f8f8;
+    background:#ffd54f;
+    color:#111;
+
 }
 
-.product-box{
-    display:inline-block;
-    width:220px;
-    background:#fff;
-    margin:15px;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-    transition:.3s;
+.btn-primary:hover{
+
+    background:#ffca28;
+    transform:translateY(-4px);
+
 }
 
-.product-box:hover{
-    transform:translateY(-8px);
-}
+.btn-outline{
 
-.product-box img{
-    width:100%;
-    border-radius:10px;
-}
-
-.product-box h3{
-    margin:15px 0;
-}
-
-.product-box p{
-    font-size:20px;
-    font-weight:bold;
-    color:#0a3d91;
-}
-
-.product-box button{
-    background:#0a3d91;
+    background:transparent;
+    border:2px solid white;
     color:white;
-    border:none;
-    padding:10px 20px;
-    border-radius:30px;
-    cursor:pointer;
+
 }
 
-.product-box button:hover{
-    background:#062b66;
+.btn-outline:hover{
+
+    background:white;
+    color:#0a3d91;
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+nav{
+
+    flex-direction:column;
+    gap:15px;
+
+}
+
+.menu{
+
+    flex-wrap:wrap;
+    justify-content:center;
+
+}
+
+.hero h1{
+
+    font-size:36px;
+
+}
+
+.hero p{
+
+    font-size:17px;
+
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
 
+<!-- ======================
+     NAVBAR
+====================== -->
+
 <nav>
-<div class="logo">🛒 TrustKart</div>
+
+<div class="logo">
+🛒 Trust<span>Kart</span>
+</div>
 
 <div class="menu">
+
 <a href="#">Home</a>
+<a href="#">Categories</a>
 <a href="#">Products</a>
 <a href="#">Deals</a>
 <a href="#">Contact</a>
+
 </div>
+
 </nav>
 
+<!-- ======================
+     HERO SECTION
+====================== -->
+
 <section class="hero">
-<h1>India's Trusted Electronics Store</h1>
-<p>Smart Shopping • Best Price • Fast Delivery</p>
-<button class="btn">Shop Now</button>
+
+<div class="hero-content">
+
+<h1>
+India's Trusted <span>Electronics Store</span>
+</h1>
+
+<p>
+
+Shop the latest Mobiles, Laptops, Smart Watches,
+Earbuds and Accessories at amazing prices with
+fast delivery across India.
+
+</p>
+
+<div class="hero-buttons">
+
+<button class="btn btn-primary">
+🛍 Shop Now
+</button>
+
+<button class="btn btn-outline">
+🔥 Explore Deals
+</button>
+
+</div>
+
+</div>
+
 </section>
+<!-- ======================
+     SHOP BY CATEGORY
+====================== -->
 
 <section class="categories">
-<h2>Shop By Category</h2>
-<br><br>
 
-<div class="cat-box">📱<br>Mobiles</div>
-<div class="cat-box">💻<br>Laptops</div>
-<div class="cat-box">⌚<br>Smart Watch</div>
-<div class="cat-box">🎧<br>Earbuds</div>
+<h2>🛍 Shop By Category</h2>
+<p class="section-text">
+Choose your favorite category and start shopping.
+</p>
+
+<div class="category-grid">
+
+<div class="cat-box">
+<div class="icon">📱</div>
+<h3>Mobiles</h3>
+<p>Latest Smartphones</p>
+</div>
+
+<div class="cat-box">
+<div class="icon">💻</div>
+<h3>Laptops</h3>
+<p>Powerful Performance</p>
+</div>
+
+<div class="cat-box">
+<div class="icon">⌚</div>
+<h3>Smart Watch</h3>
+<p>Fitness & Lifestyle</p>
+</div>
+
+<div class="cat-box">
+<div class="icon">🎧</div>
+<h3>Earbuds</h3>
+<p>Wireless Audio</p>
+</div>
+
+</div>
 
 </section>
+
+<!-- ======================
+     FEATURED PRODUCTS
+====================== -->
+
 <section class="products">
 
 <h2>🔥 Featured Products</h2>
-<br>
+<p class="section-text">
+Best selling electronics at the best prices.
+</p>
+
+<div class="product-grid">
 
 <div class="product-box">
-    <img src="https://via.placeholder.com/220x180?text=Earbuds" alt="Earbuds">
-    <h3>Wireless Earbuds</h3>
-    <p>₹999 <del>₹1999</del></p>
-    <button>🛒 Add to Cart</button>
+
+<span class="badge">20% OFF</span>
+
+<img src="https://via.placeholder.com/250x200?text=Wireless+Earbuds" alt="Wireless Earbuds">
+
+<h3>Wireless Earbuds</h3>
+
+<p class="price">
+₹999
+<del>₹1999</del>
+</p>
+
+<button class="buy-btn">
+Buy Now
+</button>
+
 </div>
 
 <div class="product-box">
-    <img src="https://via.placeholder.com/220x180?text=Watch" alt="Watch">
-    <h3>Smart Watch</h3>
-    <p>₹1499 <del>₹2999</del></p>
-    <button>🛒 Add to Cart</button>
+
+<span class="badge">30% OFF</span>
+
+<img src="https://via.placeholder.com/250x200?text=Smart+Watch" alt="Smart Watch">
+
+<h3>Smart Watch</h3>
+
+<p class="price">
+₹1499
+<del>₹2999</del>
+</p>
+
+<button class="buy-btn">
+Buy Now
+</button>
+
 </div>
 
 <div class="product-box">
-    <img src="https://via.placeholder.com/220x180?text=Speaker" alt="Speaker">
-    <h3>Bluetooth Speaker</h3>
-    <p>₹799 <del>₹1599</del></p>
-    <button>🛒 Add to Cart</button>
+
+<span class="badge">50% OFF</span>
+
+<img src="https://via.placeholder.com/250x200?text=Bluetooth+Speaker" alt="Bluetooth Speaker">
+
+<h3>Bluetooth Speaker</h3>
+
+<p class="price">
+₹799
+<del>₹1599</del>
+</p>
+
+<button class="buy-btn">
+Buy Now
+</button>
+
+</div>
+
+<div class="product-box">
+
+<span class="badge">15% OFF</span>
+
+<img src="https://via.placeholder.com/250x200?text=Gaming+Headset" alt="Gaming Headset">
+
+<h3>Gaming Headset</h3>
+
+<p class="price">
+₹1699
+<del>₹2499</del>
+</p>
+
+<button class="buy-btn">
+Buy Now
+</button>
+
+</div>
+
 </div>
 
 </section>
+<style>
 
-<footer style="background:#0a3d91;color:white;text-align:center;padding:20px;margin-top:40px;">
-    <h3>🛒 TrustKart Store</h3>
-    <p>© 2026 TrustKart. All Rights Reserved.</p>
+/* ==========================
+   CATEGORY SECTION
+========================== */
+
+.categories{
+    padding:80px 8%;
+    text-align:center;
+    background:#ffffff;
+}
+
+.categories h2,
+.products h2{
+    font-size:36px;
+    margin-bottom:10px;
+    color:#0a3d91;
+}
+
+.section-text{
+    color:#666;
+    margin-bottom:40px;
+    font-size:17px;
+}
+
+.category-grid,
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.cat-box{
+    background:#fff;
+    padding:35px 20px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.cat-box:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.icon{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.cat-box h3{
+    color:#0a3d91;
+    margin-bottom:10px;
+}
+
+/* ==========================
+   PRODUCTS
+========================== */
+
+.products{
+    padding:80px 8%;
+    background:#f5f7fb;
+    text-align:center;
+}
+
+.product-box{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.35s;
+    position:relative;
+}
+
+.product-box:hover{
+    transform:translateY(-10px);
+}
+
+.product-box img{
+    width:100%;
+    display:block;
+}
+
+.badge{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:#ff3b30;
+    color:#fff;
+    padding:6px 12px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.product-box h3{
+    margin:18px 0 10px;
+}
+
+.price{
+    color:#0a3d91;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:18px;
+}
+
+.price del{
+    color:#888;
+    font-size:15px;
+    margin-left:8px;
+}
+
+.buy-btn{
+    margin-bottom:22px;
+    padding:12px 28px;
+    border:none;
+    border-radius:40px;
+    background:#0a3d91;
+    color:#fff;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.buy-btn:hover{
+    background:#ffd54f;
+    color:#111;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+    background:#081f4d;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+footer h2{
+    margin-bottom:12px;
+}
+
+footer p{
+    color:#ddd;
+    margin:8px 0;
+}
+
+footer hr{
+    margin:20px auto;
+    width:80%;
+    border:1px solid rgba(255,255,255,.15);
+}
+
+<!-- ======================
+     FOOTER
+====================== -->
+
+<footer>
+
+<h2>🛒 TrustKart Store</h2>
+
+<p>
+India's Trusted Electronics Shopping Destination
+</p>
+
+<hr>
+
+<p>
+© 2026 TrustKart Store. All Rights Reserved.
+</p>
+
 </footer>
 
 </body>
