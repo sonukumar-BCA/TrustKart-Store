@@ -1,348 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>TrustKart - Premium Marketplace</title>
+<title>TrustKart Animated Login</title>
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
 body{
-    background:#f5f6f8;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff9966,#ff5e62);
+overflow:hidden;
 }
 
-
-/* Top Bar */
-
-.topbar{
-    background:#172337;
-    color:white;
-    padding:10px;
-    text-align:center;
-    font-size:14px;
+.container{
+width:900px;
+height:500px;
+background:#fff;
+border-radius:20px;
+display:flex;
+overflow:hidden;
+box-shadow:0 20px 50px rgba(0,0,0,.3);
 }
 
-
-/* Header */
-
-.header{
-
-    background:white;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:15px 5%;
-    box-shadow:0 2px 10px #ddd;
-
+.left{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#ffe5d5;
+position:relative;
 }
 
-
-.logo{
-
-    font-size:30px;
-    font-weight:bold;
-    color:#2874f0;
-
+.character{
+font-size:120px;
+animation:walk 1s infinite alternate;
 }
 
-
-.search{
-
-    width:45%;
-
+@keyframes walk{
+0%{
+transform:translateY(0) rotate(-5deg);
+}
+100%{
+transform:translateY(-20px) rotate(5deg);
+}
 }
 
-
-.search input{
-
-    width:100%;
-    padding:15px 20px;
-    border:none;
-    background:#f0f5ff;
-    border-radius:8px;
-    outline:none;
-    font-size:15px;
-
+.right{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
 }
-
-
-.actions button{
-
-    padding:12px 20px;
-    border:none;
-    border-radius:5px;
-    margin-left:10px;
-    cursor:pointer;
-    font-weight:bold;
-
-}
-
 
 .login{
-
-    background:#2874f0;
-    color:white;
-
+width:80%;
+animation:slide 1s ease;
 }
 
-
-.cart{
-
-    background:#ff9f00;
-    color:white;
-
+@keyframes slide{
+from{
+opacity:0;
+transform:translateX(120px);
+}
+to{
+opacity:1;
+transform:translateX(0);
+}
 }
 
-
-
-/* Category Menu */
-
-
-.categories{
-
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    background:white;
-    padding:20px;
-    margin-top:10px;
-
+h2{
+margin-bottom:20px;
+color:#333;
 }
 
-
-.cat{
-
-    text-align:center;
-    font-size:15px;
-    cursor:pointer;
-
+input{
+width:100%;
+padding:14px;
+margin:10px 0;
+border-radius:8px;
+border:1px solid #ccc;
+font-size:16px;
 }
 
-
-.cat span{
-
-    display:block;
-    font-size:35px;
-    margin-bottom:5px;
-
+button{
+width:100%;
+padding:14px;
+border:none;
+background:#ff5e62;
+color:white;
+font-size:18px;
+border-radius:8px;
+cursor:pointer;
+transition:.3s;
 }
 
-
-
-/* Hero */
-
-
-.hero{
-
-    margin:20px 5%;
-    border-radius:15px;
-    padding:60px;
-    background:
-    linear-gradient(120deg,#2874f0,#00c6ff);
-    color:white;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-}
-
-
-.hero h1{
-
-    font-size:48px;
-
-}
-
-
-.hero p{
-
-    font-size:20px;
-    margin:20px 0;
-
-}
-
-
-.hero button{
-
-    padding:15px 35px;
-    border:none;
-    border-radius:30px;
-    background:#ff9f00;
-    color:white;
-    font-size:18px;
-
-}
-
-
-.hero-icon{
-
-    font-size:150px;
-
-}
-
-
-
-/* Mobile */
-
-@media(max-width:768px){
-
-.header{
-
-    flex-direction:column;
-    gap:15px;
-
-}
-
-
-.search{
-
-    width:90%;
-
-}
-
-
-.categories{
-
-    overflow:auto;
-    justify-content:flex-start;
-
-}
-
-
-.hero{
-
-    flex-direction:column;
-    text-align:center;
-
-}
-
-
-.hero h1{
-
-    font-size:35px;
-
-}
-
+button:hover{
+background:#ff2d55;
+transform:scale(1.05);
+box-shadow:0 10px 20px rgba(255,0,80,.4);
 }
 
 </style>
-
 </head>
-
 
 <body>
 
+<div class="container">
 
-<div class="topbar">
-🔥 TrustKart Mega Sale | Best Deals Every Day
+<div class="left">
+<div class="character">🕺</div>
 </div>
 
+<div class="right">
 
+<div class="login">
 
-<div class="header">
+<h2>Welcome To TrustKart</h2>
 
+<input type="email" placeholder="Email">
 
-<div class="logo">
-🛒 TrustKart
-</div>
+<input type="password" placeholder="Password">
 
+<button>Login</button>
 
-<div class="search">
-
-<input placeholder="Search for products, brands and more">
-
-</div>
-
-
-<div class="actions">
-
-<button class="login">
-Login
-</button>
-
-<button class="cart">
-Cart 🛍️
-</button>
-
-</div>
-
-
-</div>
-
-
-
-<div class="categories">
-
-<div class="cat">
-<span>👕</span>
-Fashion
-</div>
-
-<div class="cat">
-<span>📱</span>
-Mobiles
-</div>
-
-<div class="cat">
-<span>💻</span>
-Electronics
-</div>
-
-<div class="cat">
-<span>👟</span>
-Footwear
-</div>
-
-<div class="cat">
-<span>⌚</span>
-Watches
 </div>
 
 </div>
 
-
-
-<section class="hero">
-
-
-<div>
-
-<h1>
-Shop Smart<br>
-With TrustKart
-</h1>
-
-
-<p>
-Premium products at amazing prices
-</p>
-
-
-<button>
-Shop Now
-</button>
-
-
 </div>
+/* ===== TrustKart Animation Part 2 ===== */
 
+body{
+    background:linear-gradient(-45deg,#ff6b6b,#ffb347,#4facfe,#43e97b);
+    background-size:400% 400%;
+    animation:bgMove 10s ease infinite;
+}
 
-<div class="hero-icon">
-🛍️
-</div>
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
 
+.character{
+    position:relative;
+    animation:walk 4s linear infinite;
+}
 
-</section>
+@keyframes walk{
+    0%{
+        left:-120px;
+        transform:scaleX(1);
+    }
+    50%{
+        left:120px;
+        transform:scaleX(1);
+    }
+    51%{
+        transform:scaleX(-1);
+    }
+    100%{
+        left:-120px;
+        transform:scaleX(-1);
+    }
+}
 
+.login{
+    animation:popup 0.8s ease;
+}
 
+@keyframes popup{
+    from{
+        opacity:0;
+        transform:translateY(40px) scale(.8);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
 
+button{
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 20px rgba(255,255,255,.6);
+}
 </body>
 </html>
+
