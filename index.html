@@ -3,202 +3,304 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TrustKart Animated Login</title>
 
-<style>
+<title>Premium Animated Login</title>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
+<link rel="stylesheet" href="style.css">
 
-body{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-background:linear-gradient(135deg,#ff9966,#ff5e62);
-overflow:hidden;
-}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-.container{
-width:900px;
-height:500px;
-background:#fff;
-border-radius:20px;
-display:flex;
-overflow:hidden;
-box-shadow:0 20px 50px rgba(0,0,0,.3);
-}
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-.left{
-flex:1;
-display:flex;
-justify-content:center;
-align-items:center;
-background:#ffe5d5;
-position:relative;
-}
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-.character{
-font-size:120px;
-animation:walk 1s infinite alternate;
-}
-
-@keyframes walk{
-0%{
-transform:translateY(0) rotate(-5deg);
-}
-100%{
-transform:translateY(-20px) rotate(5deg);
-}
-}
-
-.right{
-flex:1;
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
-.login{
-width:80%;
-animation:slide 1s ease;
-}
-
-@keyframes slide{
-from{
-opacity:0;
-transform:translateX(120px);
-}
-to{
-opacity:1;
-transform:translateX(0);
-}
-}
-
-h2{
-margin-bottom:20px;
-color:#333;
-}
-
-input{
-width:100%;
-padding:14px;
-margin:10px 0;
-border-radius:8px;
-border:1px solid #ccc;
-font-size:16px;
-}
-
-button{
-width:100%;
-padding:14px;
-border:none;
-background:#ff5e62;
-color:white;
-font-size:18px;
-border-radius:8px;
-cursor:pointer;
-transition:.3s;
-}
-
-button:hover{
-background:#ff2d55;
-transform:scale(1.05);
-box-shadow:0 10px 20px rgba(255,0,80,.4);
-}
-
-</style>
 </head>
 
 <body>
 
 <div class="container">
 
-<div class="left">
-<div class="character">🕺</div>
-</div>
+<div class="left-panel">
 
-<div class="right">
-
-<div class="login">
-
-<h2>Welcome To TrustKart</h2>
-
-<input type="email" placeholder="Email">
-
-<input type="password" placeholder="Password">
-
-<button>Login</button>
+<lottie-player
+src="https://assets2.lottiefiles.com/packages/lf20_m9zragkd.json"
+background="transparent"
+speed="1"
+loop
+autoplay>
+</lottie-player>
 
 </div>
 
+<div class="right-panel">
+
+<div class="card">
+
+<div class="title">
+
+<h2>Login</h2>
+
+<p>Welcome Back</p>
+
+</div>
+
+<form id="loginForm">
+
+<div class="input-box">
+
+<i class="fa-solid fa-user"></i>
+
+<input
+type="text"
+placeholder="Username"
+required>
+
+</div>
+
+<div class="input-box">
+
+<i class="fa-solid fa-lock"></i>
+
+<input
+type="password"
+id="password"
+placeholder="Password"
+required>
+
+<span id="togglePassword">
+
+<i class="fa-solid fa-eye"></i>
+
+</span>
+
+</div>
+
+<div class="remember">
+
+<label>
+
+<input type="checkbox">
+
+Remember me
+
+</label>
+
+<a href="#">Forgot?</a>
+
+</div>
+
+<button class="login-btn">
+
+Login
+
+</button>
+
+<p class="switch">
+
+Don't have an account?
+
+<span id="registerBtn">
+
+Register
+
+</span>
+
+</p>
+
+</form>
+
 </div>
 
 </div>
-/* ===== TrustKart Animation Part 2 ===== */
 
-body{
-    background:linear-gradient(-45deg,#ff6b6b,#ffb347,#4facfe,#43e97b);
-    background-size:400% 400%;
-    animation:bgMove 10s ease infinite;
-}
+</div>
 
-@keyframes bgMove{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
-}
+<script src="script.js"></script>
 
-.character{
-    position:relative;
-    animation:walk 4s linear infinite;
-}
-
-@keyframes walk{
-    0%{
-        left:-120px;
-        transform:scaleX(1);
-    }
-    50%{
-        left:120px;
-        transform:scaleX(1);
-    }
-    51%{
-        transform:scaleX(-1);
-    }
-    100%{
-        left:-120px;
-        transform:scaleX(-1);
-    }
-}
-
-.login{
-    animation:popup 0.8s ease;
-}
-
-@keyframes popup{
-    from{
-        opacity:0;
-        transform:translateY(40px) scale(.8);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0) scale(1);
-    }
-}
-
-button{
-    transition:.3s;
-}
-
-button:hover{
-    transform:scale(1.08);
-    box-shadow:0 0 20px rgba(255,255,255,.6);
-}
 </body>
 </html>
+/* ===========================
+   PART 2 - STYLE.CSS
+=========================== */
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:linear-gradient(135deg,#ff9966,#ff5e62);
+overflow:hidden;
+}
+
+.container{
+width:1000px;
+height:600px;
+display:flex;
+background:#fff;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 20px 50px rgba(0,0,0,.25);
+animation:show .8s ease;
+}
+
+@keyframes show{
+from{
+opacity:0;
+transform:scale(.8);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+.left-panel{
+width:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#ffe1c4;
+}
+
+.left-panel lottie-player{
+width:350px;
+height:350px;
+animation:float 3s infinite ease-in-out;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+}
+
+.right-panel{
+width:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:40px;
+}
+
+.card{
+width:100%;
+max-width:380px;
+}
+
+.title h2{
+font-size:34px;
+color:#333;
+}
+
+.title p{
+color:#777;
+margin-bottom:25px;
+}
+
+.input-box{
+position:relative;
+margin-bottom:20px;
+}
+
+.input-box i{
+position:absolute;
+left:15px;
+top:18px;
+color:#999;
+}
+
+.input-box input{
+width:100%;
+height:50px;
+padding-left:45px;
+padding-right:45px;
+border:1px solid #ddd;
+border-radius:10px;
+outline:none;
+transition:.3s;
+font-size:15px;
+}
+
+.input-box input:focus{
+border-color:#ff5e62;
+box-shadow:0 0 10px rgba(255,94,98,.3);
+}
+
+#togglePassword{
+position:absolute;
+right:15px;
+top:15px;
+cursor:pointer;
+}
+
+.remember{
+display:flex;
+justify-content:space-between;
+margin-bottom:20px;
+font-size:14px;
+}
+
+.remember a{
+text-decoration:none;
+color:#ff5e62;
+}
+
+.login-btn{
+width:100%;
+height:50px;
+border:none;
+background:#ff5e62;
+color:#fff;
+font-size:18px;
+border-radius:10px;
+cursor:pointer;
+transition:.3s;
+}
+
+.login-btn:hover{
+transform:translateY(-3px);
+background:#ff3d47;
+}
+
+.switch{
+text-align:center;
+margin-top:20px;
+}
+
+.switch span{
+color:#ff5e62;
+cursor:pointer;
+font-weight:bold;
+}
+
+@media(max-width:900px){
+
+.container{
+width:95%;
+flex-direction:column;
+height:auto;
+}
+
+.left-panel,
+.right-panel{
+width:100%;
+}
+
+.left-panel{
+height:250px;
+}
+
+.left-panel lottie-player{
+width:220px;
+height:220px;
+}
+
+}
