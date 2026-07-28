@@ -95,6 +95,26 @@ button:hover{
 </style>
 
 </head>
+    <script>
+const form = document.getElementById("admissionForm");
+const msg = document.getElementById("successMsg");
+
+form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    msg.style.display = "block";
+    msg.style.opacity = "0";
+
+    setTimeout(() => {
+        msg.style.opacity = "1";
+    },100);
+
+    setTimeout(() => {
+        form.reset();
+        msg.style.display = "none";
+    },3000);
+});
+    </script>
 <body>
 
 <div class="container">
