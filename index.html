@@ -246,3 +246,136 @@ gap:0;
 </div>
 
 <!-- PART 2 START -->
+<div class="row">
+
+<div class="input-box">
+<label>Father's Name</label>
+<input type="text" placeholder="Enter Father's Name" required>
+</div>
+
+<div class="input-box">
+<label>Mother's Name</label>
+<input type="text" placeholder="Enter Mother's Name" required>
+</div>
+
+</div>
+
+<div class="input-box">
+<label>Full Address</label>
+<textarea placeholder="Enter Full Address" required></textarea>
+</div>
+
+<div class="row">
+
+<div class="input-box">
+<label>Select State</label>
+<select id="state" required>
+<option value="">Select State</option>
+<option>Uttar Pradesh</option>
+<option>Bihar</option>
+<option>Jharkhand</option>
+<option>Delhi</option>
+<option>Rajasthan</option>
+<option>Madhya Pradesh</option>
+<option>West Bengal</option>
+<option>Chhattisgarh</option>
+</select>
+</div>
+
+<div class="input-box">
+<label>City</label>
+<input type="text" placeholder="Enter City" required>
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-box">
+<label>PIN Code</label>
+<input type="number" placeholder="Enter PIN Code" required>
+</div>
+
+<div class="input-box">
+<label>Upload Photo</label>
+<input type="file" id="photo" accept="image/*">
+</div>
+
+</div>
+
+<div class="preview" id="preview">
+<img id="previewImg" src="" alt="Preview">
+</div>
+
+<div class="row">
+
+<div class="input-box">
+<label>Password</label>
+<input type="password" placeholder="Create Password" required>
+</div>
+
+<div class="input-box">
+<label>Confirm Password</label>
+<input type="password" placeholder="Confirm Password" required>
+</div>
+
+</div>
+
+<div class="input-box">
+<label>
+<input type="checkbox" required>
+ I agree to the Terms & Conditions
+</label>
+</div>
+
+<button type="submit">
+🚀 Submit Admission
+</button>
+
+<div class="success" id="successMsg">
+✅ Admission Submitted Successfully!
+</div>
+
+</form>
+
+</div>
+
+<!-- PART 3 START -->
+    <script>
+const form = document.getElementById("admissionForm");
+const msg = document.getElementById("successMsg");
+
+const photo = document.getElementById("photo");
+const preview = document.getElementById("preview");
+const previewImg = document.getElementById("previewImg");
+
+photo.addEventListener("change", function () {
+    const file = this.files[0];
+
+    if (file) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            previewImg.src = e.target.result;
+            preview.style.display = "block";
+        };
+
+        reader.readAsDataURL(file);
+    }
+});
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    msg.style.display = "block";
+
+    setTimeout(() => {
+        form.reset();
+        preview.style.display = "none";
+        msg.style.display = "none";
+    }, 3000);
+});
+</script>
+
+</body>
+</html>
